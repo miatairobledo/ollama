@@ -31,7 +31,3 @@ RUN /bin/sh -c "ollama start && \
 
 # Comando para iniciar la aplicación cuando se ejecute el contenedor
 CMD ["ollama", "start"]
-
-# Adaptaciones para compatibilidad con render.com
-# Render.com establece la variable de entorno PORT a 10000 por defecto
-ENV PORT 8080
