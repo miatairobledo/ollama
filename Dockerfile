@@ -14,8 +14,4 @@ RUN /bin/sh -c "ollama start & sleep 10 && \
     ollama run llava && \
     ollama run mistral && \
     ollama run codellama && \
-    ollama run orca-mini && \
-    ollama run starcoder2"
-
-# Comando para iniciar la aplicación cuando se ejecute el contenedor
-CMD ["ollama", "start"]
+    ollama run orca-mini"
