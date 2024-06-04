@@ -1,9 +1,6 @@
 # Utilizar la imagen base de Ollama
 FROM ollama/ollama
 
-# Establecer el directorio de trabajo
-WORKDIR /app
-
 # Exponer los puertos necesarios
 EXPOSE 8080
 EXPOSE 443
