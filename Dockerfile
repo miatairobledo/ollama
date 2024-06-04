@@ -1,25 +1,21 @@
 # Utilizar la imagen base de Ollama
 FROM ollama/ollama
 
-# Instalar todos los modelos disponibles
-RUN ollama run gemma
-
-RUN ollama run phi3
-
-RUN ollama run llava
-
-RUN ollama run mistral
-
-RUN ollama run codellama
-
-RUN ollama run orca-mini
-
-RUN ollama run starcoder2
-
+# Exponer los puertos necesarios
 EXPOSE 8080
 EXPOSE 443
 EXPOSE 11434
 EXPOSE 80
+
+# Iniciar la aplicación ollama en segundo plano y luego instalar los modelos
+RUN /bin/sh -c "ollama start & sleep 10 && \
+    ollama run gemma && \
+    ollama run phi3 && \
+    ollama run llava && \
+    ollama run mistral && \
+    ollama run codellama && \
+    ollama run orca-mini && \
+    ollama run starcoder2"
 
 # Comando para iniciar la aplicación cuando se ejecute el contenedor
 CMD ["ollama", "start"]
