@@ -8,7 +8,7 @@ EXPOSE 11434
 EXPOSE 80
 
 # Iniciar la aplicación ollama y luego instalar los modelos
-CMD ["sh", "-c", "ollama start && \
+CMD ["ollama start && \
     ollama run gemma && \
     ollama run phi3 && \
     ollama run llava && \
