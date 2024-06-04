@@ -13,5 +13,14 @@ RUN /bin/sh -c "ollama start & sleep 10 && \
     ollama run phi3 && \
     ollama run llava && \
     ollama run mistral && \
-    ollama run codellama && \
-    ollama run llama3"
+    ollama run starcoder && \
+    ollama run openchat && \
+    ollama run wizard-math && \
+    ollama run codeqwen && \
+    ollama run dolphincoder && \
+    ollama run codestral && \
+    ollama run falcon2 && \
+    ollama run sqlcoder2 && \ 
+    ollama run bakllava && \
+    ollama run magicoder && \
+    ollama run tinyllama"
