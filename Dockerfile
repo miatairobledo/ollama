@@ -8,7 +8,7 @@ EXPOSE 11434
 EXPOSE 80
 
 # Iniciar la aplicación ollama y luego instalar los modelos
-RUN /bin/sh -c "ollama start && \
+CMD ["/bin/sh", "-c", "ollama start && \
     ollama run gemma && \
     ollama run phi3 && \
     ollama run llava && \
@@ -24,7 +24,5 @@ RUN /bin/sh -c "ollama start && \
     ollama run wizardlm2 && \
     ollama run llama2-uncensored && \
     ollama run deepseek-coder && \
-    ollama run wizard-vicuna-uncensored"
-
-# Comando para iniciar la aplicación cuando se ejecute el contenedor
-CMD ["ollama", "start"]
+    ollama run wizard-vicuna-uncensored && \
+    tail -f /dev/null"]
