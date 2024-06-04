@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-on-self-hosted:
-    runs-on: self-hosted
+    runs-on: [self-hosted, ubuntu-latest]
 
     steps:
     - name: Start Docker service
