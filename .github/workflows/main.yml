@@ -10,6 +10,9 @@ jobs:
     runs-on: self-hosted
 
     steps:
+    - name: Start Docker service
+      run: sudo systemctl start docker
+
     - name: Checkout repository
       uses: actions/checkout@v2
 
