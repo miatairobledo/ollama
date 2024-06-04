@@ -7,9 +7,8 @@ EXPOSE 443
 EXPOSE 11434
 EXPOSE 80
 
-# Iniciar la aplicación ollama y luego instalar los modelos
-CMD ["ollama start && \
-    ollama run gemma && \
+# Iniciar la aplicación ollama en segundo plano y luego instalar los modelos
+RUN /bin/sh -c "ollama start && \
     ollama run phi3 && \
     ollama run llava && \
     ollama run mistral && \
@@ -24,4 +23,4 @@ CMD ["ollama start && \
     ollama run wizardlm2 && \
     ollama run llama2-uncensored && \
     ollama run deepseek-coder && \
-    ollama run wizard-vicuna-uncensored"]
+    ollama run wizard-vicuna-uncensored"
