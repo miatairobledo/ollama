@@ -2,19 +2,19 @@
 FROM ollama/ollama
 
 # Instalar todos los modelos disponibles
-RUN ollama install gemma
+RUN ollama run gemma
 
-RUN ollama install phi3
+RUN ollama run phi3
 
-RUN ollama install llava
+RUN ollama run llava
 
-RUN ollama install mistral
+RUN ollama run mistral
 
-RUN ollama install codellama
+RUN ollama run codellama
 
-RUN ollama install orca-mini
+RUN ollama run orca-mini
 
-RUN ollama install starcoder2
+RUN ollama run starcoder2
 
 EXPOSE 8080
 EXPOSE 443
