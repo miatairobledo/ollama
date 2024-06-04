@@ -19,7 +19,6 @@ RUN /bin/sh -c "ollama start & sleep 10 && \
     ollama run codeqwen && \
     ollama run dolphincoder && \
     ollama run codestral && \
-    ollama run falcon2 && \
     ollama run sqlcoder2 && \ 
     ollama run bakllava && \
     ollama run magicoder && \
